@@ -1,0 +1,313 @@
+.portfolio-body{
+  background: #e7e6e6;
+  
+}
+.portfolio-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  font-family: "Montserrat", sans-serif;
+  
+} 
+
+.portfolio-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+/* New Stufffff */
+
+.portfolio-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  
+}
+
+.intro-line {
+  font-size: 24px;
+}
+
+.portfolio-intro a{
+  font-size: 20px;
+}
+
+.portfolio-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: #020617;
+  font-weight: 600;
+  margin-top: 20px;
+  
+
+}
+
+
+.portfolio-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin-bottom: 5%;
+  margin-top: -1.8%;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  width: 85%;
+  height: 350px;
+  overflow: hidden;
+}
+
+
+
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+
+
+
+
+.portfolio-image img {
+  width: 95%;
+  height: 330px;
+}
+
+
+.portfolio-image {
+  width: 40%;
+  height: 350px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.portfolio-content h4 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #020617;
+  font-family:"Montserrat",sans-serif;
+  
+}
+
+.portfolio-desc {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+/* Tech stack pills (NOT buttons) */
+.portfolio-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.portfolio-tech span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background-color: #f1f5f9;
+  color: #020617;
+  font-weight: 500;
+
+}
+
+/* View project link */
+.portfolio1-link {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #020617;
+  position: relative;
+}
+
+.portfolio1-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: #020617;
+  transition: width 0.3s ease;
+}
+
+.portfolio1-link:hover::after {
+  width: 100%;
+}
+
+.portfolio2-link {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #555;
+  position: relative;
+}
+
+.portfolio2-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #020617;
+  transition: width 0.3s ease;
+}
+
+.portfolio2-link:hover::after {
+  width: 100%;
+}
+
+
+ .portfolio-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+@media (max-width: 900px) {
+.intro-line {
+  font-size: 18px;
+}
+
+.portfolio-intro a{
+  font-size: 16px;
+}
+
+.portfolio-title {
+  margin-bottom: 30px;
+  font-size: 22px;
+  letter-spacing: 0px;
+  margin-left: 0px;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  height: 450px;
+}
+
+.portfolio-image {
+  width: 92%;
+  height: 190px;
+  margin-left: 3px;
+  margin-top: -5px;
+}
+
+.portfolio-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio-content h4 {
+  font-size: 18px;
+  margin-bottom: -8px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+.portfolio-desc {
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+/* Tech stack pills (NOT buttons) */
+.portfolio-tech {
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.portfolio-tech span {
+  font-size: 11px;
+}
+
+/* View project link */
+.portfolio1-link {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #020617;
+  position: relative;
+}
+
+.portfolio1-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: #020617;
+  transition: width 0.3s ease;
+
+
+}
+
+.portfolio1-link:hover::after {
+  width: 100%;
+}
+
+.portfolio2-link {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #555;
+  position: relative;
+
+
+  font-size: 12px;
+}
+
+.portfolio2-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #020617;
+  transition: width 0.3s ease;
+
+
+  bottom: -1px;
+}
+
+.portfolio2-link:hover::after {
+  width: 100%;
+}
+
+.portfolio-link {
+  font-size: 14px;
+}
+
+.portfolio-link::after {
+  bottom: -1px;
+}
+
+.portfolio-content {
+  margin-left: 14px;
+} 
+
+}

@@ -1,0 +1,225 @@
+/* Core Layout */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* The "Hide" state - smoother than just opacity */
+.nav-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Replaces manual margins */
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+}
+
+/* Animated Underline */
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+.nav-items a:hover::after {
+  width: 100%;
+}
+
+/* Button Styling (Semantic <a> used as button) */
+.github-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.github-button:hover {
+  transform: translateY(-2px);
+  background: #333;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px; /* Partial width looks more modern */
+  height: 100vh;
+  background: white;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+.mobile-nav-items {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.mobile-nav-items li {
+  margin: 20px 0;
+}
+
+.mobile-nav-items a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #111;
+  font-weight: 600;
+}
+
+
+
+
+/* --- DESKTOP NAV ITEMS --- */
+.nav-items {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline for Desktop ONLY */
+.nav-items li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+.nav-items li a:hover::after {
+  width: 100%;
+}
+
+/* --- MOBILE NAV ITEMS --- */
+.mobile-nav-items {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.mobile-nav-items li {
+  margin: 25px 0; /* Vertical spacing for fingers to tap easily */
+}
+
+.mobile-nav-items li a {
+  text-decoration: none;
+  font-size: 22px; /* Larger for mobile readability */
+  color: #111;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-nav-items li a:active {
+  opacity: 0.6; /* Visual feedback for touch */
+}
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-items, .github-button:not(.mobile-github) {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}

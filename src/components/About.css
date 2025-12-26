@@ -1,0 +1,149 @@
+.about-section {
+  position: relative;
+  height: 100vh;
+  
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family:"Montserrat",sans-serif;
+}
+
+.about-container {
+  
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.divider-title {
+  display: flex;           /* Uses flexbox to align text and lines */
+  align-items: center;     /* Vertically centers the lines with the text */
+  text-align: center;
+  font-size: 32px;         /* Standard mobile hero heading size */
+  font-weight: bold;
+  margin: 2rem 0;          /* Adds spacing above and below */
+}
+
+.divider-title::before,
+.divider-title::after {
+  content: "";             /* Required for pseudo-elements to show */
+  flex: 1;                 /* Makes both lines grow to fill empty space */
+  height: 6px;             /* Line thickness */
+  background: #111;        /* Line color */
+}
+
+.divider-title::before {
+  margin-right: 15px;      /* Gap between left line and text */
+}
+
+.divider-title::after {
+  margin-left: 15px;       /* Gap between right line and text */
+}
+
+
+
+
+
+.san {
+  letter-spacing: -5px;
+}
+
+.about-subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+/* Layout for left image + right paragraph */
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+/* IMAGE */
+.about-image-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.about-image {
+  width: 220px;
+  height: auto;
+  border-radius: 6px;
+  transform: rotate(-2deg);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-annotation {
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  font-size: 14px;
+  color: #62c76a;
+  font-style: italic;
+}
+
+/* TEXT AREA */
+.about-text {
+  width: 55%;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .divider-title {
+  font-size: 30px;
+  margin-left: -8px;
+  letter-spacing: -1px;
+  margin-bottom: -5px;
+  color: #111;
+  font-weight: 800;
+}
+.about-subtitle {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-left: -25px;
+  opacity: 0.7;
+}
+.about-image {
+  width: 150px;
+  margin-left: -6px;
+  height: auto;
+  border-radius: 3px;
+  transform: rotate(-2deg);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.about-annotation {
+  left: 1px;
+}
+.about-text {
+  width: 75%;
+  
+  margin-left: -25px;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+}

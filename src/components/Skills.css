@@ -1,0 +1,124 @@
+.skills-section {
+  background: #ffffff;
+  height: 87vh;
+  padding: 50px 0;   /* 👈 THIS FIXES THE TOUCH ISSUE */
+  font-family: "Montserrat", sans-serif;
+}
+
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  
+}
+
+.skills-heading {
+  font-size: 40px;
+  letter-spacing: 2px;
+  
+  color: #111;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Tabs */
+.skills-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.skills-tab {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #9ca3af;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+.skills-tab.active {
+  color: #000;
+}
+
+.skills-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.skills-tab.active::after {
+  transform: scaleX(1);
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* Skill card */
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.skill-icon {
+  font-size: 1.1rem;
+}
+
+.skill-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .skills-heading {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.skills-tab {
+  font-size: 17px;
+  font-weight: 800;
+  padding-bottom: 4px;
+}
+.skill-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 4px;
+  width: 65%;
+}
+.skills-grid {
+  display: grid;
+  gap: 12px;
+  margin-left: 15%;
+}
+
+}
